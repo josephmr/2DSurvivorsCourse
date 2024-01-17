@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://brjaqhm2vtv7o"]
+
+[ext_resource type="AudioStream" uid="uid://bwhxfudq1e0h8" path="res://assets/audio/music.mp3" id="1_t52by"]
+[ext_resource type="Script" path="res://scenes/autoload/music_player.gd" id="2_sx53i"]
+
+[node name="MusicPlayer" type="AudioStreamPlayer"]
+process_mode = 3
+stream = ExtResource("1_t52by")
+volume_db = -15.0
+autoplay = true
+bus = &"music"
+script = ExtResource("2_sx53i")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
